@@ -56,6 +56,7 @@ export const DropdownList = () => {
           title="Tus Acciones"
           showDivider
         >
+          {/* @ts-ignore */}
           {(item: INavbarDropdown) => {
             return (
               <DropdownItem

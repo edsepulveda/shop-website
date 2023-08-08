@@ -34,6 +34,7 @@ export default function NavbarPage() {
   ];
 
   return (
+    //@ts-ignore
     <Navbar onMenuOpenChange={setIsOpen} className="shadow">
       <NavbarContent justify="start">
         <NavbarMenuToggle
@@ -64,12 +65,6 @@ export default function NavbarPage() {
           </Badge>
         </NavbarItem>
 
-        <NavbarItem className="hidden sm:block">
-          <Button as={NextLink} color="danger" href="#" variant="flat">
-            Iniciar sesión
-          </Button>
-        </NavbarItem>
-
         <NavbarItem>
           <DropdownList />
         </NavbarItem>
@@ -78,12 +73,6 @@ export default function NavbarPage() {
       {/* Mobile Menu */}
       <NavbarMenu>
         <MobileNavbarItems item={menuItems} />
-        <Divider className="my-4" />
-        <NavbarMenuItem className="w-full">
-          <Button as={NextLink} color="danger" href="#" variant="flat">
-            Iniciar Sesión
-          </Button>
-        </NavbarMenuItem>
       </NavbarMenu>
     </Navbar>
   );
