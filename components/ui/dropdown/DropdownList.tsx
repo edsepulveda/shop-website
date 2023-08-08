@@ -33,7 +33,7 @@ export const navbarDropdownItems: INavbarDropdown[] = [
 
 export const DropdownList = () => {
   return (
-    <Dropdown placement="bottom-end" backdrop="opaque">
+    <Dropdown placement="bottom-end">
       <DropdownTrigger>
         <Avatar
           src="https://i.pravatar.cc/150?u=a042581f4e29026024d"
