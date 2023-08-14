@@ -6,7 +6,15 @@ import {
   DropdownItem,
   DropdownSection,
 } from "@nextui-org/react";
-import { CreditCardIcon, ProfileIcon, SignOut } from "../icons/Icons";
+import {
+  AdminIcon,
+  CreditCardIcon,
+  FolderIcon,
+  ProductIcon,
+  ProfileIcon,
+  SignOut,
+  UserIcon,
+} from "../icons/Icons";
 import { INavbarDropdown } from "@/utils/types";
 
 export const navbarDropdownItems: INavbarDropdown[] = [
@@ -47,8 +55,8 @@ export const DropdownList = () => {
         variant="shadow"
       >
         <DropdownItem key="profile" className="h-14 gap-2">
-          <p className="font-semibold">Signed in as</p>
-          <p className="font-semibold">zoey@example.com</p>
+          <p className="font-semibold">Usuario: Pepito</p>
+          <p className="font-semibold">Correo: zoey@example.com</p>
         </DropdownItem>
 
         <DropdownSection
@@ -60,7 +68,7 @@ export const DropdownList = () => {
           {(item: INavbarDropdown) => {
             return (
               <DropdownItem
-                key={item.key}
+                key={item.title}
                 description={item.description}
                 startContent={item.icon}
                 color={item.key === "cerrar" ? "danger" : "default"}
@@ -73,7 +81,34 @@ export const DropdownList = () => {
         </DropdownSection>
 
         <DropdownSection title="Panel Administrativo">
-          <DropdownItem></DropdownItem>
+          <DropdownItem
+            key="dashboard"
+            description="Visualiza información general sobre la tienda"
+            startContent={<AdminIcon />}
+          >
+            Dashboard
+          </DropdownItem>
+          <DropdownItem
+            key="productos"
+            description="Ve todos los productos de la tienda"
+            startContent={<ProductIcon />}
+          >
+            Productos
+          </DropdownItem>
+          <DropdownItem
+            key="ordenes"
+            description="Ve las ordenes que han sido creadas"
+            startContent={<FolderIcon />}
+          >
+            Ordenes
+          </DropdownItem>
+          <DropdownItem
+            key="usuarios"
+            description="Ve los usuarios registrados"
+            startContent={<UserIcon />}
+          >
+            Usuarios
+          </DropdownItem>
         </DropdownSection>
       </DropdownMenu>
     </Dropdown>
