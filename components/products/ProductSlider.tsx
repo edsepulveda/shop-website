@@ -46,7 +46,7 @@ export const ProductSlider: FC<Props> = ({ images }) => {
 
   return (
     <section aria-label="navigation-control" className="relative">
-      <div ref={slideRef} className="keen-slider zoom-out cursor-grab">
+      <div ref={slideRef} className="keen-slider zoom-out cursor-grab mx-auto">
         {images.map((image, idx) => {
           const url = `/products/${image}`;
           return (

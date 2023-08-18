@@ -23,7 +23,7 @@ export const NavbarItems = ({ item }: { item: Items[] }) => {
                 pathname === it.pathname ? "underline" : ""
               } transition-all duration-200`}
               color={`${pathname === it.pathname ? "danger" : "foreground"}`}
-              href="#"
+              href={it.pathname}
             >
               {it.name}
             </Link>

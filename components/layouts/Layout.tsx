@@ -30,11 +30,10 @@ export default function Layout({
       </Head>
 
       <section className={inter.className}>
-        <header aria-label="Navbar">
+        <header aria-label="Navbar" className="sticky">
           <nav>
             <NavbarPage />
           </nav>
-          <div>{/* Sidebar */}</div>
         </header>
 
         <main className="my-[80px] mx-auto max-w-[1440px] py-0 px-[30px]">

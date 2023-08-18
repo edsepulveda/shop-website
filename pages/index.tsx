@@ -8,7 +8,7 @@ export default function Home() {
       <h1 className="scroll-m-20 text-4xl lg:text-5xl font-bold tracking-tight">
         Style Connect
       </h1>
-      <p className="leading-7">Items en la tienda</p>
+      <p className="leading-7 [&:not(:first-child)]:mt-6">Items en la tienda</p>
 
       <div className="mt-10">
         <ProductList product={initialData?.products} />
