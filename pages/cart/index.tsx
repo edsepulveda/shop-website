@@ -12,7 +12,7 @@ import {
   CardHeader,
   Button,
 } from "@nextui-org/react";
-import NextLink from "next/Link";
+import NextLink from "next/link";
 
 export default function CartHome() {
   const threeProducts: IProduct[] = [
