@@ -6,9 +6,11 @@ import {
   CardFooter,
   Button,
 } from "@nextui-org/react";
-import React from "react";
+import { useRouter } from "next/navigation";
 
 export const OrderSummary = () => {
+  const router = useRouter();
+
   return (
     <aside className="lg:fixed lg:w-96">
       <Card className="bg-slate-100 dark:bg-gray-900 p-4">
@@ -42,7 +44,11 @@ export const OrderSummary = () => {
         </CardBody>
 
         <CardFooter className="flex flex-col gap-5">
-          <Button className="inline-flex w-full" color="primary">
+          <Button
+            className="inline-flex w-full"
+            color="primary"
+            onPress={() => router.push("/checkout")}
+          >
             Checkout
           </Button>
         </CardFooter>

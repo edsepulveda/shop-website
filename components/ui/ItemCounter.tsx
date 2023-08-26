@@ -6,8 +6,8 @@ export const ItemCounter = () => {
   const [counter, setCounter] = useState<number>(1);
 
   return (
-    <div className="mt-2.5">
-      <p className="font-medium">Cantidad</p>
+    <div className="mt-2.5 flex flex-col gap-1">
+      <p className="text-sm lg:text-base font-medium">Cantidad</p>
       <div className="flex justify-start items-center gap-4">
         <Button
           onPress={() => setCounter((prev) => prev - 1)}
