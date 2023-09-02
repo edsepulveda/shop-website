@@ -1,6 +1,5 @@
 import { IProduct } from "@/utils/types";
 import {
-  Card,
   CardHeader,
   CardBody,
   Button,

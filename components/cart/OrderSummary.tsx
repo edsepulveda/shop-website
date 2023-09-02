@@ -13,7 +13,7 @@ export const OrderSummary = () => {
 
   return (
     <aside className="lg:fixed lg:w-96">
-      <Card className="bg-slate-100 dark:bg-gray-900 p-4">
+      <Card className="bg-slate-200 dark:bg-slate-900 p-4">
         <CardHeader className="scroll-m-20 text-2xl font-semibold tracking-tight">
           Order Summary
         </CardHeader>

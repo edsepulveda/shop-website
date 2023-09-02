@@ -21,14 +21,14 @@ const CheckoutPage = () => {
                 <form>
                   <div className="mt-6 grid gap-4 lg:gap-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
-                      <div>
+                      <div className="grid">
                         <Input
                           type="email"
                           label="Email"
                           placeholder="Enter your email"
                         />
                       </div>
-                      <div>
+                      <div className="grid">
                         <Input
                           type="email"
                           label="Email"

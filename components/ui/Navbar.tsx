@@ -6,6 +6,7 @@ import {
   Button,
   NavbarMenuToggle,
   NavbarMenu,
+  Link,
   Badge,
   Popover,
   PopoverTrigger,
@@ -20,6 +21,7 @@ import { MobileNavbarItems, NavbarItems } from "./NavbarItems";
 import { DropdownList } from "./dropdown/DropdownList";
 import { useTheme } from "next-themes";
 import { motion } from "framer-motion";
+import NextLink from "next/link";
 
 export default function NavbarPage() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -42,7 +44,13 @@ export default function NavbarPage() {
           className="block sm:hidden"
         />
         <NavbarBrand>
-          <p className="ml-3 font-bold text-black dark:text-white">Style Connect</p>
+          <Link
+            as={NextLink}
+            href='/'
+            className="ml-3 font-bold text-black dark:text-white"
+          >
+            Style Connect
+          </Link>
         </NavbarBrand>
       </NavbarContent>
 
@@ -51,7 +59,7 @@ export default function NavbarPage() {
       </NavbarContent>
 
       <NavbarContent as="div" className="items-center" justify="end">
-        <NavbarItem>
+        <NavbarItem className="hidden lg:block">
           <Popover>
             <PopoverTrigger>
               <Button isIconOnly variant="light">

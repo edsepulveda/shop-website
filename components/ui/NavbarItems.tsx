@@ -1,7 +1,15 @@
 import { Items } from "@/utils/types";
-import { NavbarItem, Link, NavbarMenuItem } from "@nextui-org/react";
+import {
+  NavbarItem,
+  Link,
+  NavbarMenuItem,
+  Input,
+  Divider,
+} from "@nextui-org/react";
 import NextLink from "next/link";
 import { usePathname } from "next/navigation";
+import { SearchIcon } from "./icons/Icons";
+
 import { motion } from "framer-motion";
 
 //[COMPONENT] Desktop items mapper
@@ -52,6 +60,14 @@ export const MobileNavbarItems = ({ item }: { item: Items[] }) => {
           </Link>
         </NavbarMenuItem>
       ))}
+      <Divider className="mt-4 mb-4" />
+      <NavbarItem>
+        <Input
+          placeholder="Busca tus productos.."
+          labelPlacement="outside"
+          startContent={<SearchIcon />}
+        />
+      </NavbarItem>
     </div>
   );
 };
