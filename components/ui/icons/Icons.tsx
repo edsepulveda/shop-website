@@ -1,3 +1,5 @@
+import React from "react";
+
 export const NavbarLogo = () => {
   return (
     <svg
@@ -267,5 +269,26 @@ export const SunIcon = () => (
       strokeLinejoin="round"
       d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
     />
+  </svg>
+);
+
+export const SelectorIcon = (props: React.HTMLAttributes<SVGSVGElement>) => (
+  <svg
+    aria-hidden="true"
+    fill="none"
+    focusable="false"
+    height="1em"
+    role="presentation"
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth="1.5"
+    viewBox="0 0 24 24"
+    width="1em"
+    {...props}
+  >
+    <path d="M0 0h24v24H0z" fill="none" stroke="none" />
+    <path d="M8 9l4 -4l4 4" />
+    <path d="M16 15l-4 4l-4 -4" />
   </svg>
 );
